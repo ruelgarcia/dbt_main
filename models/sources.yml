@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: airbnb
+  - name: airbnb_raw
     schema: raw
     tables:
        - name: listings
@@ -16,3 +16,9 @@ sources:
          freshness:
           warn_after: {count: 1, period: hour}
           error_after: {count: 24, period: hour}
+
+  - name: airbnb_dev
+    schema: dev
+    tables:
+       - name: fct_reviews
+         identifier: fct_reviews
