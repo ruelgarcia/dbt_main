@@ -1,3 +1,7 @@
+{{
+    config(materialized = 'view')
+}}
+
 WITH cte_src_hosts AS (
     SELECT 
     host_id
